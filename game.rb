@@ -12,7 +12,7 @@ class Game
         @apple = Apple.new(gb_width, gb_height, size)
         apple.display
 
-        @snake_head = SnakeHead.new(gb_width, gb_height, size, [gb_width/2, gb_height/2])
+        @snake_head = SnakeHead.new(gb_width, gb_height, size, [0, gb_height/2])
         @snake_bits = [] # order: tail (leftmost) to head (rightmost) but without head
     end
 
