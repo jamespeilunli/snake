@@ -9,11 +9,16 @@ class Apple
         @color = color
         @cur_square = nil
 
-        new_pos
+        @pos = [rand(0...gb_width), rand(0...gb_height)]
     end
 
-    def new_pos
+    def new_pos(snake_bits)
         @pos = [rand(0...gb_width), rand(0...gb_height)]
+        snake_bits.each do |snake_bit|
+            if snake_bit.pos == pos
+                new_pos(snake_bits)
+            end
+        end
     end
 
     def display

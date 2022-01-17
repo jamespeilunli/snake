@@ -10,10 +10,10 @@ This project uses the [ruby2d](https://github.com/ruby2d/ruby2d) gem as a game e
 
 - [x] Moveable snake head
 - [x] Moveable snake body
-- [ ] Apple mechanics
+- [x] Apple mechanics
   - [x] Apple random spawn
   - [x] Make snake length change when eaten
-  - [ ] Make apple not spawn inside snake
+  - [x] Make apple not spawn inside snake
 - [x] Collision detection and game over on collision
 - [ ] Win detection
 - [ ] Thinner snake
