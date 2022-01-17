@@ -34,7 +34,7 @@ class Game
         ate_apple = snake_head.ate_apple?(apple)
         if ate_apple
             snake_bits.push(SnakeBit.new(old_head_pos, size))
-            apple.new_pos(snake_bits)
+            apple.new_pos(snake_bits + [snake_head])
             apple.display
         end
 

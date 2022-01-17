@@ -12,7 +12,7 @@ class Apple
         @pos = [rand(0...gb_width), rand(0...gb_height)]
     end
 
-    def new_pos(snake_bits)
+    def new_pos(snake_bits) # snake_bits includes snake_head here
         @pos = [rand(0...gb_width), rand(0...gb_height)]
         snake_bits.each do |snake_bit|
             if snake_bit.pos == pos
