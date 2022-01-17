@@ -49,5 +49,20 @@ class SnakeHead < SnakeBit
         apple.pos == pos
     end
 
+    def collided?(snake_bits)
+        # collided with wall
+        return true if (0 > pos[0] || pos[0] >= gb_width || 0 > pos[1] || pos[1] >= gb_height)
+
+        # collided with snake
+        snake_bits.each do |snake_bit|
+            if snake_bit.pos == pos
+                return true
+            end
+        end
+
+        # else
+        false
+    end
+
 end
 

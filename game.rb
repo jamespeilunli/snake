@@ -25,9 +25,13 @@ class Game
     def tick
         # get old snake head pos and move snake head
         old_head_pos = snake_head.pos.dup
-        ate_apple = snake_head.ate_apple?(apple)
         snake_head.move
 
+        if snake_head.collided?(snake_bits)
+            return "game over"
+        end
+
+        ate_apple = snake_head.ate_apple?(apple)
         if ate_apple
             snake_bits.push(SnakeBit.new(old_head_pos, size))
             apple.new_pos
@@ -44,6 +48,8 @@ class Game
         end
 
         display
+
+        nil
     end
 
 end

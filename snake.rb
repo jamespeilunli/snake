@@ -13,10 +13,16 @@ set background: "black"
 set width: size*gb_width
 set height: size*gb_height
 
+def game_over
+    exit
+end
+
 t = 0
 update do
     if t % 20 == 0 # 3 times a second 
-        game.tick
+        if game.tick == "game over"
+            game_over
+        end
     end
 
     t += 1
