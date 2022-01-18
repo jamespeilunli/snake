@@ -6,6 +6,8 @@ require_relative "game"
 gb_width = 20 
 gb_height = 20
 size = 40 # size is length of each square
+speed = 12 # ticks per second
+
 game = Game.new(gb_width, gb_height, size)
 cur_direction = "right"
 
@@ -20,7 +22,7 @@ end
 
 t = 0
 update do
-    if t % 5 == 0 # 6 times a second 
+    if t % (60/speed) == 0
         if game.tick == "game over"
             game_over
         end
