@@ -7,6 +7,7 @@ gb_width = 20
 gb_height = 20
 size = 40 # size is length of each square
 game = Game.new(gb_width, gb_height, size)
+cur_direction = "right"
 
 set title: "Snake"
 set background: "black"
@@ -23,6 +24,7 @@ update do
         if game.tick == "game over"
             game_over
         end
+        cur_direction = game.snake_head.direction
     end
 
     t += 1
@@ -36,7 +38,7 @@ opposing_direction = {
 }
 
 on :key_down do |event|
-    if opposing_direction.keys.include?(event.key) && opposing_direction[event.key] != game.snake_head.direction
+    if opposing_direction.keys.include?(event.key) && opposing_direction[event.key] != cur_direction
         game.snake_head.direction = event.key
     end
 end

@@ -15,7 +15,7 @@ This project uses the [ruby2d](https://github.com/ruby2d/ruby2d) gem as a game e
   - [x] Make snake length change when eaten
   - [x] Make apple not spawn inside snake
 - [x] Collision detection and game over on collision
-- [ ] Make moving the opposite direction impossible (i.e. if you're moving right and you quickly press up the left you can still go backwards)
+- [x] Make moving the opposite direction impossible (i.e. if you're moving right and you quickly press up the left you can still go backwards)
 - [ ] Win detection
 - [ ] Thinner snake
 
