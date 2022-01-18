@@ -3,9 +3,9 @@ require_relative "game"
 
 # variables
 # gb_ stands for gameboard 
-gb_width = 10 
-gb_height = 10
-size = 50 # size is length of each square
+gb_width = 20 
+gb_height = 20
+size = 40 # size is length of each square
 game = Game.new(gb_width, gb_height, size)
 
 set title: "Snake"
