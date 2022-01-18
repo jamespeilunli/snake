@@ -20,7 +20,7 @@ end
 
 t = 0
 update do
-    if t % 10 == 0 # 6 times a second 
+    if t % 5 == 0 # 6 times a second 
         if game.tick == "game over"
             game_over
         end
